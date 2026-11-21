@@ -6,13 +6,16 @@ An analog Garmin Connect IQ watch face for the Forerunner 965. The active displa
 
 ## Watch face preview
 
-![Night Flieger at 12:30 with SAT 21 at the top, BAT 100 on the left, and 30 on the right](docs/night-flieger-preview.png)
+| Active display | Always-On Display |
+| --- | --- |
+| ![Night Flieger active display at 12:30 with SAT 21 at the top, BAT 100 on the left, and 30 on the right](docs/night-flieger-active.png) | ![Night Flieger Always-On Display at 12:30 with gray hands, hour numbers, and a large 30 at the center](docs/night-flieger-always-on.png) |
 
 | On the display | Meaning |
 | --- | --- |
 | `SAT 21` at the top | Saturday, the 21st day of the month. |
 | `100` above `BAT` on the left | Battery level, shown as a number from 0 to 100. The red marks indicate the charge level. |
 | `30` on the right | The current minute. In this example, the hands show 12:30. |
+| Large `30` at the center (Always-On) | The current minute, drawn behind the hands. |
 
 ## Project structure
 
