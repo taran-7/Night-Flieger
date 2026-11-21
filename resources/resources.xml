@@ -1,5 +1,5 @@
 <resources>
-    <string id="AppName">Flieger 965</string>
+    <string id="AppName">Night Flieger</string>
     <bitmap id="LauncherIcon" filename="icon.png"/>
     <font id="DetailFont" filename="detail.fnt" antialias="true"/>
     <font id="BatteryFont" filename="battery.fnt" antialias="true"/>

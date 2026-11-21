@@ -1,4 +1,4 @@
-# Flieger 965
+# Night Flieger
 
 Аналоговий циферблат Garmin Connect IQ для Forerunner 965. В активному режимі показує місцевий час, день тижня й число, заряд батареї та точне значення хвилин. У режимі Always-On видно лише стрілки та годинні мітки.
 
@@ -21,6 +21,6 @@
    ```
 
 4. Для перевірки відкрийте Connect IQ Simulator і виконайте `monkeydo bin/FLIEGER.PRG fr965`. Перевірте активний режим і Always-On.
-5. Під’єднайте годинник через USB і скопіюйте `FLIEGER.PRG` до `GARMIN/APPS`. На годиннику виберіть **Flieger 965** у меню циферблатів. [Інструкція Garmin](https://developer.garmin.com/connect-iq/connect-iq-basics/your-first-app/).
+5. Під’єднайте годинник через USB і скопіюйте `FLIEGER.PRG` до `GARMIN/APPS`. На годиннику виберіть **Night Flieger** у меню циферблатів. [Інструкція Garmin](https://developer.garmin.com/connect-iq/connect-iq-basics/your-first-app/).
 
 Для оновлень зберігайте ідентифікатор у `manifest.xml`. Якщо перехід із попередньої збірки, підписаної іншим ключем, не спрацює, видаліть попередню копію циферблата з годинника й установіть нову.
