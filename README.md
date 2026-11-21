@@ -2,7 +2,7 @@
 
 [Українська](README.uk.md)
 
-An analog Garmin Connect IQ watch face for the Forerunner 965. The active display shows local time, the weekday and day of the month, battery level, and the exact minute. Always-On Display shows the hands, hour numbers, and hour markers.
+An analog Garmin Connect IQ watch face for the Forerunner 965. The active display shows local time, the weekday and day of the month, battery level, and the exact minute. Always-On Display shows the hands, hour numbers, hour markers, and a large minute readout in the center.
 
 ## Watch face preview
 
@@ -13,6 +13,12 @@ An analog Garmin Connect IQ watch face for the Forerunner 965. The active displa
 | `SAT 21` at the top | Saturday, the 21st day of the month. |
 | `100` above `BAT` on the left | Battery level, shown as a number from 0 to 100. The red marks indicate the charge level. |
 | `30` on the right | The current minute. In this example, the hands show 12:30. |
+
+### Always-On preview
+
+![Night Flieger Always-On display at 12:30, with 30 centered behind the hands](docs/night-flieger-always-on.png)
+
+The center number shows the current minute. Date and battery level appear on the active display.
 
 ## Project structure
 
