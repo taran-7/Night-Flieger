@@ -29,12 +29,14 @@ class FliegerView extends WatchUi.WatchFace {
     private var _centerX as Number = 227;
     private var _centerY as Number = 227;
 
+    private var _alwaysOnMinutesFont as FontResource;
     private var _detailFont as FontResource;
     private var _chargeFont as FontResource;
     private var _batteryFont as FontResource;
 
     function initialize() {
         WatchFace.initialize();
+        _alwaysOnMinutesFont = WatchUi.loadResource(Rez.Fonts.AlwaysOnMinutesFont) as FontResource;
         _detailFont = WatchUi.loadResource(Rez.Fonts.DetailFont) as FontResource;
         _chargeFont = WatchUi.loadResource(Rez.Fonts.ChargeFont) as FontResource;
         _batteryFont = WatchUi.loadResource(Rez.Fonts.BatteryFont) as FontResource;
@@ -66,6 +68,7 @@ class FliegerView extends WatchUi.WatchFace {
                 tick(dc, _centerX, _centerY, marker * 90, 197, 211, DIM, 2);
             }
             drawHourNumbers(dc, Graphics.FONT_MEDIUM, DIM, true);
+            label(dc, _centerX, _centerY, _alwaysOnMinutesFont, local.min.toString(), 0x3e3c35);
         } else {
             dc.setColor(INK, INK);
             dc.clear();
