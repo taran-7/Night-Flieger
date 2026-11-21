@@ -1,26 +1,29 @@
 # Night Flieger
 
-Аналоговий циферблат Garmin Connect IQ для Forerunner 965. В активному режимі показує місцевий час, день тижня й число, заряд батареї та точне значення хвилин. У режимі Always-On видно лише стрілки та годинні мітки.
+An analog Garmin Connect IQ watch face for the Forerunner 965. The active display shows local time, the weekday and day of the month, battery level, and the exact minute. Always-On Display shows the hands, hour numbers, and hour markers.
 
-## Структура проєкту
+## Project structure
 
-- `manifest.xml` задає ідентифікатор застосунку, тип циферблата та модель `fr965`.
-- `monkey.jungle` задає конфігурацію збірки.
-- `source/Flieger.mc` містить логіку, розташування елементів, кольори та режим Always-On.
-- `resources/` містить іконку, описи ресурсів і растрові шрифти. Для зміни гарнітури замініть відповідну пару `.fnt` і `.png` та збережіть посилання на неї в `resources/resources.xml`. Ліцензія шрифтів міститься в `FONT-LICENSE.txt`.
+- `manifest.xml` defines the app ID, watch face type, and `fr965` target.
+- `monkey.jungle` defines the build configuration.
+- `source/Flieger.mc` contains the rendering logic, including layout, colors, and Always-On behavior.
+- `resources/` contains the launcher icon, resource definitions, and bitmap fonts. To change a font, replace its `.fnt` and `.png` files and update the reference in `resources/resources.xml` if the filenames change. The font license is in `FONT-LICENSE.txt`.
 
-## Збірка та встановлення
+## Build
 
-1. Установіть [Garmin Connect IQ SDK](https://developer.garmin.com/connect-iq/sdk/) і завантажте профіль **Forerunner 965** у SDK Manager. Проєкт збирався з Connect IQ SDK 9.3.0.
-2. У VS Code встановіть розширення **Monkey C** від Garmin і відкрийте кореневу папку проєкту. У палітрі команд виберіть **Monkey C: Generate Developer Key** і збережіть приватний ключ поза репозиторієм. Для наступних збірок використовуйте той самий ключ і зберігайте його резервну копію.
-3. Виконайте **Monkey C: Build for Device** та виберіть **Forerunner 965**. Або виконайте з кореня проєкту, якщо `monkeyc` доступний у `PATH`:
+1. Install the [Garmin Connect IQ SDK](https://developer.garmin.com/connect-iq/sdk/) and download the **Forerunner 965** device profile in SDK Manager. This project has been built with Connect IQ SDK 9.3.0.
+2. Open the project folder in VS Code with Garmin's **Monkey C** extension installed. Run **Monkey C: Generate Developer Key** from the Command Palette if you need a signing key. Keep the key outside the repository and use the same key for future updates.
+3. Run **Monkey C: Build for Device** and select **Forerunner 965**. If `monkeyc` is on your `PATH`, you can also build from the project root:
 
    ```sh
    mkdir -p bin
    monkeyc -f monkey.jungle -d fr965 -o bin/FLIEGER.PRG -y /path/to/developer_key.der -l 3 -w -r
    ```
 
-4. Для перевірки відкрийте Connect IQ Simulator і виконайте `monkeydo bin/FLIEGER.PRG fr965`. Перевірте активний режим і Always-On.
-5. Під’єднайте годинник через USB і скопіюйте `FLIEGER.PRG` до `GARMIN/APPS`. На годиннику виберіть **Night Flieger** у меню циферблатів. [Інструкція Garmin](https://developer.garmin.com/connect-iq/connect-iq-basics/your-first-app/).
+## Test and install
 
-Для оновлень зберігайте ідентифікатор у `manifest.xml`. Якщо перехід із попередньої збірки, підписаної іншим ключем, не спрацює, видаліть попередню копію циферблата з годинника й установіть нову.
+1. Open the Connect IQ Simulator, run `monkeydo bin/FLIEGER.PRG fr965`, and check both the active and Always-On displays.
+2. Connect the watch via USB and copy `FLIEGER.PRG` to `GARMIN/APPS`.
+3. Disconnect the watch and select **Night Flieger** from the watch face menu. [Garmin sideloading instructions](https://developer.garmin.com/connect-iq/connect-iq-basics/your-first-app/)
+
+Keep the app ID in `manifest.xml` when building updates. If an update signed with a different key fails to install, remove the previous copy from the watch and install the new build.
