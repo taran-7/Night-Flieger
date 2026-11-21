@@ -23,6 +23,8 @@ class FliegerView extends WatchUi.WatchFace {
     private const MUTED = 0xa9aca1;
     private const RED = 0xee0024;
     private const DIM = 0x55534c;
+    // Darker than DIM so the Always-On hands stay readable over the minutes.
+    private const AOD_MINUTE = 0x3a3833;
     private const DEG = Math.PI / 180.0;
 
     private var _sleeping as Boolean = false;
@@ -77,6 +79,8 @@ class FliegerView extends WatchUi.WatchFace {
         var hourAngle = (local.hour % 12) * 30 + local.min * 0.5;
         var minuteAngle = local.min * 6;
         if (_sleeping) {
+            label(dc, _centerX, _centerY, Graphics.FONT_NUMBER_HOT, local.min.format("%02d"),
+                AOD_MINUTE);
             tick(dc, _centerX, _centerY, hourAngle, 0, 105, DIM, 8);
             tick(dc, _centerX, _centerY, minuteAngle, 0, 145, DIM, 6);
             return;

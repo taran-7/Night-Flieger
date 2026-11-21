@@ -2,7 +2,7 @@
 
 [Українська](README.uk.md)
 
-An analog Garmin Connect IQ watch face for the Forerunner 965. The active display shows local time, the weekday and day of the month, battery level, and the exact minute. Always-On Display shows the hands, hour numbers, and hour markers.
+An analog Garmin Connect IQ watch face for the Forerunner 965. The active display shows local time, the weekday and day of the month, battery level, and the exact minute. Always-On Display shows the hands, hour numbers, hour markers, and the current minute in large digits at the center.
 
 ## Watch face preview
 
