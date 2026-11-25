@@ -2,23 +2,27 @@
 
 [Українська](README.uk.md)
 
-An analog Garmin Connect IQ watch face for the Forerunner 965. The active display shows local time, the weekday and day of the month, battery level, and the exact minute. Always-On Display shows the hands, hour numbers, hour markers, and a large minute readout in the center.
+An analog Garmin Connect IQ watch face for the Forerunner 965. The active display shows local time, the weekday and day of the month, battery level, and the exact minute. Always-On Display shows the hands, hour numbers, hour markers, and a large white time readout in the center.
 
 ## Watch face preview
 
-![Night Flieger at 12:30 with SAT 21 at the top, BAT 100 on the left, and 30 on the right](docs/night-flieger-preview.png)
+![Night Flieger at 12:30 with SAT 21 at the top, BAT 60 on the left, and 30 on the right](docs/night-flieger-preview.png)
 
 | On the display | Meaning |
 | --- | --- |
 | `SAT 21` at the top | Saturday, the 21st day of the month. |
-| `100` above `BAT` on the left | Battery level, shown as a number from 0 to 100. The red marks indicate the charge level. |
+| `60` above `BAT` on the left | Battery level, shown as a number from 0 to 100. The ring fills clockwise in proportion to the remaining charge. The filled marks are green at 60–100, dark yellow at 30–59, and dark red at 1–29. At zero, all marks are dim. |
 | `30` on the right | The current minute. In this example, the hands show 12:30. |
 
 ### Always-On preview
 
-![Night Flieger Always-On display at 12:30, with 30 centered behind the hands](docs/night-flieger-always-on.png)
+![Night Flieger Always-On display at 12:30, with white digital time and yellow and blue hands](docs/night-flieger-always-on.png)
 
-The center number shows the current minute. Date and battery level appear on the active display.
+The center shows the local time. The hour hand is yellow and the minute hand is blue. Date and battery level appear on the active display.
+
+## Kyiv air alert colors
+
+Night Flieger checks the status of the city of Kyiv through Garmin Connect. With fresh data, the active minute readout and Always-On time are white when no alert is active, yellow at the yellow level, and red at the red level. An orange last digit means the check failed or the source data is more than seven minutes old. Check the alert app on your phone in that case. Garmin schedules checks at five-minute intervals and may run them later. [Status data by Tryvoha.online](https://tryvoha.online/)
 
 ## Project structure
 
