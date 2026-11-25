@@ -22,6 +22,10 @@ The center shows the local time. The hour hand is yellow and the minute hand is 
 
 ## Kyiv air alert colors
 
+![Night Flieger mockup showing all four Kyiv alert states in active mode and Always-On Display](docs/night-flieger-kyiv-alerts.png)
+
+Top row: active display. Bottom row: Always-On Display.
+
 Night Flieger checks the status of the city of Kyiv through Garmin Connect. With fresh data, the active minute readout and Always-On time are white when no alert is active, yellow at the yellow level, and red at the red level. An orange last digit means the check failed or the source data is more than seven minutes old. Check the alert app on your phone in that case. Garmin schedules checks at five-minute intervals and may run them later. [Status data by Tryvoha.online](https://tryvoha.online/)
 
 ## Project structure
