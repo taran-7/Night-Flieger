@@ -4,5 +4,6 @@
     <font id="DetailFont" filename="detail.fnt" antialias="true"/>
     <font id="BatteryFont" filename="battery.fnt" antialias="true"/>
     <font id="ChargeFont" filename="charge.fnt" antialias="true"/>
-    <font id="AlwaysOnMinutesFont" filename="aod-minutes.fnt" antialias="true"/>
+    <font id="AlwaysOnTimeFont" filename="aod-minutes.fnt" antialias="true"/>
+    <font id="LargeChargeFont" filename="charge-large.fnt" antialias="true"/>
 </resources>
